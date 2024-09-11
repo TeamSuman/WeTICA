@@ -3,11 +3,7 @@
 
 ## Usage
 
-python WeTICA.py -h
-
-arguments:
-
-      -h, --help          show this help message and exit
+      python WeTICA.py -h
   
       -dire DIRE          Directory containing input files
   

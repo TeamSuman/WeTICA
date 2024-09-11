@@ -1,13 +1,15 @@
 # WeTICA
 
 
+
+
 ## Usage
 
 First download the wepy weighted ensemble software. Open the link provided below and follow the installation guide.
 
       https://adicksonlab.github.io/wepy/_source/installation.html
 
-Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activete the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values.
+Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. 
 
       python WeTICA.py -h
   
@@ -45,7 +47,12 @@ Inside the "Scripts" folder of this repository, several python files are there. 
   
       -gid GID [GID ...]  GPU ids
 
-### Example
+#### Example
 
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
     -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350
+
+#### Workflow diagram
+
+![WE_TICA_protocol](https://github.com/user-attachments/assets/d60c2ea9-e2ce-445f-bda6-c1c66eaa5fef)
+

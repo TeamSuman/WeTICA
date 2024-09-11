@@ -1,5 +1,8 @@
 # WeTICA
 
+
+## Usage
+
 python WeTICA.py -h
 
 arguments:

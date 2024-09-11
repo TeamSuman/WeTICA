@@ -13,7 +13,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
 
       python WeTICA.py -h
   
-      -dire DIRE          Directory containing input files
+      -dire DIRE          Directory containing system related input files
   
       -num NUM            Number of walkers [Optional, default=24]
   
@@ -54,10 +54,12 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
     -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350
 
+#### On-the-fly monitoring of the simulation progress
+
+While the WE simulation is running, a new file named "Info_*.txt" will be generated alongside the main HDF5 file inside the same folder that contains the system related input files. Informations from this file can be used to monitor the progress of the simulation on-the-fly without opening the HDF5 file. Gradual decrease of the 'Clst walk. dist' value indicates the progress of the simulation.
+
 
 ## Data analysis
-
-While the WE simulation is running, a new file named "Info_*.txt" will be generated alongside the main HDF5 file. Informations from this file can be used to monitor the progress of the simulation on-the-fly without opening the HDF5 file. Gradual decrease of the 'Clst walk. dist' value indicates the progress of the simulation.
 
 To compute the kinetic observables, a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
 

@@ -42,3 +42,8 @@ arguments:
       -ngpu NGPU          Number of available GPU cards
   
       -gid GID [GID ...]  GPU ids
+
+### Example
+
+    python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
+    -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350

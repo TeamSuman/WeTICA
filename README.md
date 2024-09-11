@@ -2,8 +2,6 @@
 
 python WeTICA.py -h
 
-Usage: python WeTICA.py [Options]
-
 arguments:
 
       -h, --help          show this help message and exit

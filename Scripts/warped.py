@@ -400,7 +400,7 @@ class TargetBC(ReceptorBC):
     PROGRESS_RECORD_FIELDS = ReceptorBC.PROGRESS_RECORD_FIELDS + ('distances_fromtarget', )
 
     def __init__(self, initial_state=None,
-                 cutoff_distance=0.3,
+                 cutoff_distance=None,
                  idxs=None,
                  target_pos=None,
                  eigenvecs=None,

@@ -54,5 +54,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
 
 #### Workflow diagram
 
+
+
 ![WE_TICA_protocol](https://github.com/user-attachments/assets/d60c2ea9-e2ce-445f-bda6-c1c66eaa5fef)
 

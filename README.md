@@ -3,7 +3,11 @@
 
 ## Usage
 
-Inside the "Scripts" folder, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activete the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values.
+First download the wepy weighted ensemble software. Open the link provided below and follow the installation guide.
+
+      https://adicksonlab.github.io/wepy/_source/installation.html
+
+Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activete the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values.
 
       python WeTICA.py -h
   

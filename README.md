@@ -3,7 +3,7 @@
 
 ## Usage
 
-Inside the "Scripts" folder, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Active the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly.Many optional arguments are there with default values.
+Inside the "Scripts" folder, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activete the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values.
 
       python WeTICA.py -h
   

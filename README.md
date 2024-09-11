@@ -5,7 +5,7 @@
 
 ## Usage
 
-First download the wepy weighted ensemble software. Open the link provided below and follow the installation guide.
+First download the "wepy" weighted ensemble software. Open the link provided below and follow the installation guide.
 
       https://adicksonlab.github.io/wepy/_source/installation.html
 

@@ -49,7 +49,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
 
 #### Example
 
-This example showcases the use of WeTICA.py script to study the unfolding of Protein G.
+This example showcases the use of WeTICA.py script to study the unfolding of Protein G using the first to eigenvectors (specified as: -vid 0 1) as the collective variables (CVs).
 
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
     -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350

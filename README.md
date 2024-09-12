@@ -3,7 +3,7 @@
 
 ## Data Preparation
 
-To start WeTICA weighted ensemble simulation, at least 4 major files are required. Example files are provided in the "Systems" directory.
+To start WeTICA weighted ensemble simulation, at least 4 major files are required. Example files are provided in the "Systems" folder of this repository.
 
 1) An equilibrated neutrilize solvated initial structure file in GROMACS .gro format.
 2) System topology file in GROMACS .top format.

@@ -78,7 +78,7 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
     -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350
 
-#### On-the-fly monitoring of the simulation progress
+## On-the-fly monitoring of the simulation progress
 
 While the WE simulation is running, a new file named "Info_*.txt" will be generated alongside the main HDF5 file inside the same folder that contains the system related input files. Informations from this file can be used to monitor the progress of the simulation on-the-fly without opening the HDF5 file. Gradual decrease of the 'Clst walk. dist' value indicates the progress of the simulation. Is “Clst walk. dist” ≈ d_warp? 
 If yes, there is posibility that some walkers reach the target. Now its time for convergence check as described below.

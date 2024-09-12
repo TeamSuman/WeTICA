@@ -5,7 +5,7 @@
 
 To start WeTICA weighted ensemble simulation, at least 4 major files are required. 
 
-1) A equilibrated neutrilize solvated initial structure file in GROMACS .gro format.
+1) An equilibrated neutrilize solvated initial structure file in GROMACS .gro format.
 2) System topology file in GROMACS .top format.
 3) Target structure file in GROMACS .gro format.
 4) An eigenvector file in .txt format where each column represents one eigenvector.

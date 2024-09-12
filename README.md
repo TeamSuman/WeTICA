@@ -13,10 +13,10 @@ To start WeTICA weighted ensemble simulation, at least 4 major files are require
 
 Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_top_gro.py" python script available in AmberTools can be used to convert the amber structure and topology to GROMACS format.
 
-Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS formats can be generated from there itself.
+    amb2gro_top_gro.py -p mol.prmtop -c mol.inpcrd -t mol.itp -g mol.gro
 
-Note 1c. ParmEd package is generally used to convert files between different format. For more information visit:
-https://github.com/ParmEd/ParmEd
+Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS format can be generated from there itself.
+
 
 
 

@@ -1,5 +1,7 @@
 # WeTICA
 
+WeTICA is a binless weighted ensemble based enhanced sampling method on a predefined linear CV space. It uses 'wepy' weighted ensemble software (https://adicksonlab.github.io/wepy/index.html) to run and store simulation data.
+
 
 ## Data Preparation
 

@@ -1,6 +1,6 @@
 # WeTICA
 
-WeTICA is a binless weighted ensemble based enhanced sampling method to study rare event kinetics on a predefined linear CV space. It uses 'wepy' weighted ensemble software (https://adicksonlab.github.io/wepy/index.html) to run and store simulation data.
+WeTICA is a binless weighted ensemble based enhanced sampling method to study rare event kinetics on a predefined linear CV space. It uses WEPY weighted ensemble software (https://adicksonlab.github.io/wepy/index.html) to run and store simulation data.
 
 
 ## Data Preparation
@@ -29,11 +29,11 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 ## Usage
 
-First download the "wepy" weighted ensemble software. Open the link provided below and follow the installation guide.
+First download the WEPY weighted ensemble software. Open the link provided below and follow the installation guide.
 
       https://adicksonlab.github.io/wepy/_source/installation.html
 
-Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the wepy environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. 
+Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the WEPY environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. 
 
       python WeTICA.py -h
   

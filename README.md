@@ -1,5 +1,20 @@
 # WeTICA
 
+To start WeTICA weighted ensemble simulation, at least 4 major files are required. 
+
+1) A equilibrated neutrilize solvated initial structure file in GROMACS .gro format.
+2) System topology file in GROMACS .top format.
+3) Target structure file in GROMACS .gro format.
+4) An eigenvector file in .txt format where each column represents one eigenvector.
+5) A file containing the pairwise selected atom ids in .txt format (Optional).
+
+Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_top_gro.py" python script available in AmberTools can be used to convert the amber structure and topology to GROMACS format.
+
+Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS formats can be generated from there itself.
+
+Note 1c. ParmEd package is generally used to convert files between different format. For more information visit:
+https://github.com/ParmEd/ParmEd
+
 
 ## Data Preparation
 

@@ -17,7 +17,7 @@ Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_to
 
 Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS format can be generated from there itself.
 
-Note 2. Currently WeTICA framework support two featurization schemes: 1) all CA-CA atom pairwise distances ('allCA') 2) Selected atom pairwise distances ('sel_pair'). To maintain consistency in calculations, both the eigenvector generation and the simulation should be performed using the same feature.
+Note 2. Currently WeTICA framework support two featurization schemes: 1) all CA-CA atom pairwise distances ('allCA'), 2) Selected atom pairwise distances ('sel_pair'). To maintain consistency in calculations, both the eigenvector generation and the simulation should be performed using the same feature.
 
 Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization scheme. This file is not required for the 'allCA' feature.
 

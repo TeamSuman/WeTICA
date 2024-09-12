@@ -57,7 +57,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
   
       -vid VID [VID ...]  Eigenvectors to be used e.g 0-> 1st vector, 1-> 2nd vector, ...
   
-      -feat FEAT          Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distance & 'allCA'-> pairwise all CA-CA distance
+      -feat FEAT          Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distance & 'allCA'-> pairwise CA-CA distance
   
       -pair PAIR          File containing indices of selected atoms [Optional, but required for 'sel_pair' feature]
   

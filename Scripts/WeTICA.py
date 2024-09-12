@@ -50,7 +50,7 @@ parser.add_argument("-top", type=str, help="System topology file (GROMACS .top f
 parser.add_argument("-ref", type=str, help="Target structure file (GROMACS .gro format)",required=True)
 parser.add_argument("-vec", type=str, help="Eigenvector file",required=True)
 parser.add_argument("-vid", type=int, help="Eigenvectors to be used e.g 0-> 1st vector, 1-> 2nd vector, ...",required=True, nargs='+')
-parser.add_argument("-feat", type=str, help="Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distance & 'allCA'-> pairwise all CA-CA distance",required=True)
+parser.add_argument("-feat", type=str, help="Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distances & 'allCA'-> pairwise CA-CA distances",required=True)
 parser.add_argument("-pair", type=str, help="File containing indices of selected atoms [Optional, but required for 'sel_pair' feature]", required=False)
 parser.add_argument("-dist1", type=float, help="Merge distance cut-off (unitless) [Optional, default=1.0]",required=False, default=1.0)
 parser.add_argument("-dist2", type=float, help="Warped distance cut-off (unitless) [Optional, default=0.25]",required=False, default=0.25)

@@ -1,5 +1,8 @@
 # WeTICA
 
+
+## Data Preparation
+
 To start WeTICA weighted ensemble simulation, at least 4 major files are required. 
 
 1) A equilibrated neutrilize solvated initial structure file in GROMACS .gro format.
@@ -15,8 +18,6 @@ Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS 
 Note 1c. ParmEd package is generally used to convert files between different format. For more information visit:
 https://github.com/ParmEd/ParmEd
 
-
-## Data Preparation
 
 
 

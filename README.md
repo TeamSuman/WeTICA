@@ -21,7 +21,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
   
       -rid RID            Run index
   
-      -steps STEPS        Number of MD steps between two consecutive resampling processes [optional, default=10000]
+      -steps STEPS        Number of MD steps between two consecutive resampling processes [optional, default=10000 -> 20 ps]
   
       -cyc CYC            Total number of cycles in each run [optional, default=20000]
   

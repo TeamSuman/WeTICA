@@ -17,6 +17,8 @@ Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_to
 
 Note 1b. If CHARMM-GUI is used to prepare system and topology, files in GROMACS format can be generated from there itself.
 
+Note 2. Currently WeTICA framework support two featurization schemes: 1) all CA-CA atom pairwise distances 2) Selected atom pairwise distances. To maintain consistency in calculations, both the eigenvector generation and the simulation should be performed using the same feature.
+
 
 
 
@@ -93,6 +95,5 @@ Open the notebook and follow the instructions to calculate the above mentioned q
 ## Workflow Diagram
 
 
-
-![WE_TICA_protocol](https://github.com/user-attachments/assets/d60c2ea9-e2ce-445f-bda6-c1c66eaa5fef)
+![WE_TICA_protocol](https://github.com/user-attachments/assets/957b9f96-f7b9-4e7b-b60e-6335cc05b2b0)
 

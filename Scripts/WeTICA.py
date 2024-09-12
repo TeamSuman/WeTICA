@@ -43,7 +43,7 @@ parser = argparse.ArgumentParser(description="Usage: python WeTICA.py [Options]\
 parser.add_argument("-dire", type=str, help="Directory containing system related input files",required=True)
 parser.add_argument("-num", type=int, help="Number of walkers [Optional, default=24]",required=False, default=24)
 parser.add_argument("-rid", type=int, help="Run index",required=True)
-parser.add_argument("-steps",  type=int, help="Number of MD steps between two consecutive resampling processes [optional, default=10000]",required=False, default=10000)
+parser.add_argument("-steps",  type=int, help="Number of MD steps between two consecutive resampling processes [optional, default=10000 -> 20 ps]",required=False, default=10000)
 parser.add_argument("-cyc", type=int, help="Total number of cycles in each run [optional, default=20000]",required=False, default=20000)
 parser.add_argument("-init", type=str, help="Starting structure file (GROMACS .gro format)",required=True)
 parser.add_argument("-top", type=str, help="System topology file (GROMACS .top format)",required=True)

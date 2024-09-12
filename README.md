@@ -11,7 +11,7 @@ To start WeTICA weighted ensemble simulation, at least 4 major files are require
 4) An eigenvector file in .txt format where each column represents one eigenvector.
 5) A file containing the pairwise selected 0-based atom ids in .txt format (Optional).
 
-Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_top_gro.py" python script available in AmberTools can be used to convert the amber structure and topology to GROMACS format.
+Note 1a. If AmberTools is used to prepare system and topology files, "amb2gro_top_gro.py" python script available in AmberTools can be used to convert the amber structure and topology to GROMACS format in the following way.
 
     amb2gro_top_gro.py -p mol.prmtop -c mol.inpcrd -t mol.itp -g mol.gro
 

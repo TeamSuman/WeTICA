@@ -58,7 +58,9 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
 
 #### On-the-fly monitoring of the simulation progress
 
-While the WE simulation is running, a new file named "Info_*.txt" will be generated alongside the main HDF5 file inside the same folder that contains the system related input files. Informations from this file can be used to monitor the progress of the simulation on-the-fly without opening the HDF5 file. Gradual decrease of the 'Clst walk. dist' value indicates the progress of the simulation.
+While the WE simulation is running, a new file named "Info_*.txt" will be generated alongside the main HDF5 file inside the same folder that contains the system related input files. Informations from this file can be used to monitor the progress of the simulation on-the-fly without opening the HDF5 file. Gradual decrease of the 'Clst walk. dist' value indicates the progress of the simulation. Is “Clst walk. dist” ≈ d_warp? 
+If yes, there is posibility that some walkers reach the target. Now its time for convergence check as described below.
+
 
 
 ## Data Analysis

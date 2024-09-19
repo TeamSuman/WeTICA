@@ -37,7 +37,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
 
       python WeTICA.py -h
   
-      -dire DIRE          Full PATH of the Directory containing system related input files
+      -dire DIRE          Full PATH of the directory containing system related input files
   
       -num NUM            Number of walkers [Optional, default=24]
   

@@ -95,9 +95,3 @@ To compute the kinetic observables, a jupyter notebook is provided in the "Analy
 
 Open the notebook and follow the instructions to calculate the above mentioned quantities. No major a priori knowledge about the HDF5 file is required to run the notebook.
 
-
-## Workflow Diagram
-
-
-![WE_TICA_protocol](https://github.com/user-attachments/assets/957b9f96-f7b9-4e7b-b60e-6335cc05b2b0)
-

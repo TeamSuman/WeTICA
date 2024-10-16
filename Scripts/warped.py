@@ -378,7 +378,7 @@ class TargetBC(ReceptorBC):
     """
 
     BC_SHAPES = ReceptorBC.BC_SHAPES + ((1,), )
-    BC_DTYPES = ReceptorBC.BC_DTYPES + (np.float, )
+    BC_DTYPES = ReceptorBC.BC_DTYPES + (float, )
     BC_RECORD_FIELDS = ReceptorBC.BC_RECORD_FIELDS + ('boundary_distance', )
 
     # warping (sporadic)
@@ -396,7 +396,7 @@ class TargetBC(ReceptorBC):
     """
 
     PROGRESS_SHAPES = ReceptorBC.PROGRESS_SHAPES + (Ellipsis,)
-    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (np.float,)
+    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (float,)
     PROGRESS_RECORD_FIELDS = ReceptorBC.PROGRESS_RECORD_FIELDS + ('distances_fromtarget', )
 
     def __init__(self, initial_state=None,

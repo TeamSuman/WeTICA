@@ -146,7 +146,7 @@ class BoundaryConditions(object):
 
     """
 
-    WARPING_DTYPES = (np.int, np.int, np.float)
+    WARPING_DTYPES = (int, int, float)
     """Specifies the numpy dtypes to be used for records.
 
     There should be the same number of elements as there are in the
@@ -481,7 +481,7 @@ class RandomBC(BoundaryConditions):
     # records of boundary condition changes (sporadic)
     BC_FIELDS = ('ping',)
     BC_SHAPES = ((1,),)
-    BC_DTYPES = (np.int,)
+    BC_DTYPES = (int,)
 
     BC_RECORD_FIELDS = ('ping',)
 
@@ -490,7 +490,7 @@ class RandomBC(BoundaryConditions):
     # progress towards the boundary conditions (continual)
     PROGRESS_FIELDS = ('weight',)
     PROGRESS_SHAPES = (Ellipsis,)
-    PROGRESS_DTYPES = (np.float,)
+    PROGRESS_DTYPES = (float,)
 
     PROGRESS_RECORD_FIELDS = ('weight',)
 

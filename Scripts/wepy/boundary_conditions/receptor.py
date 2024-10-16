@@ -406,7 +406,7 @@ class RebindingBC(ReceptorBC):
     """
 
     BC_SHAPES = ReceptorBC.BC_SHAPES + ((1,), )
-    BC_DTYPES = ReceptorBC.BC_DTYPES + (np.float, )
+    BC_DTYPES = ReceptorBC.BC_DTYPES + (float, )
 
     BC_RECORD_FIELDS = ReceptorBC.BC_RECORD_FIELDS + ('native_rmsd_cutoff', )
 
@@ -420,7 +420,7 @@ class RebindingBC(ReceptorBC):
     # progress towards the boundary conditions (continual)
     PROGRESS_FIELDS = ReceptorBC.PROGRESS_FIELDS + ('native_rmsd',)
     PROGRESS_SHAPES = ReceptorBC.PROGRESS_SHAPES + (Ellipsis,)
-    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (np.float,)
+    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (float,)
 
     PROGRESS_RECORD_FIELDS = ReceptorBC.PROGRESS_RECORD_FIELDS + ('native_rmsd', )
     """Records for the state of this record group.
@@ -579,7 +579,7 @@ class UnbindingBC(ReceptorBC):
     """
 
     BC_SHAPES = ReceptorBC.BC_SHAPES + ((1,), )
-    BC_DTYPES = ReceptorBC.BC_DTYPES + (np.float, )
+    BC_DTYPES = ReceptorBC.BC_DTYPES + (float, )
     BC_RECORD_FIELDS = ReceptorBC.BC_RECORD_FIELDS + ('boundary_distance', )
 
     # warping (sporadic)
@@ -598,7 +598,7 @@ class UnbindingBC(ReceptorBC):
     """
 
     PROGRESS_SHAPES = ReceptorBC.PROGRESS_SHAPES + (Ellipsis,)
-    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (np.float,)
+    PROGRESS_DTYPES = ReceptorBC.PROGRESS_DTYPES + (float,)
     PROGRESS_RECORD_FIELDS = ReceptorBC.PROGRESS_RECORD_FIELDS + ('min_distances', )
 
     def __init__(self, initial_state=None,

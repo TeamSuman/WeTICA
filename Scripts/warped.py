@@ -378,7 +378,7 @@ class TargetBC(ReceptorBC):
     """
 
     BC_SHAPES = ReceptorBC.BC_SHAPES + ((1,), )
-    BC_DTYPES = ReceptorBC.BC_DTYPES + (float, )
+    BC_DTYPES = ReceptorBC.BC_DTYPES + (np.float, )
     BC_RECORD_FIELDS = ReceptorBC.BC_RECORD_FIELDS + ('boundary_distance', )
 
     # warping (sporadic)

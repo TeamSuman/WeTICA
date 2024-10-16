@@ -33,7 +33,12 @@ First download the WEPY weighted ensemble software. Open the link provided below
 
       https://adicksonlab.github.io/wepy/_source/installation.html
 
-Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the WEPY environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. 
+Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the WEPY environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. The environment should have:
+
+      pandas <= 2.1.4
+      numpy >= 2.1.0
+
+The command line options are showcased below:
 
       python WeTICA.py -h
   

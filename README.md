@@ -71,9 +71,7 @@ The command line options are showcased below:
       -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.25]
   
       -tem TEM            Temperature in Kelvin [Optional, default=300]
-  
-      -ngpu NGPU          Number of available GPU cards
-  
+    
       -gid GID [GID ...]  GPU ids
 
 #### Example
@@ -81,7 +79,7 @@ The command line options are showcased below:
 This example showcases the use of WeTICA.py script to study the unfolding of Protein G using the first two eigenvectors (specified as: -vid 0 1) as the collective variables (CVs).
 
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
-    -feat sel_pair  -pair atom_pairs.txt -ngpu 4 -gid 0 1 2 3 -tem 350
+    -feat sel_pair  -pair atom_pairs.txt -gid 0 1 2 3 -tem 350
 
 ## On-the-fly monitoring of the simulation progress
 

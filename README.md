@@ -31,7 +31,7 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 First install OpenMM and MDTraj.
 
-      conda create -n openmm 
+      conda create -n openmm python==3.10
       conda activate openmm
       conda install -c conda-forge openmm=8.0.0
       conda install -c conda-forge mdtraj=1.9.9

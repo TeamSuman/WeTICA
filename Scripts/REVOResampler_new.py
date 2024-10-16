@@ -262,9 +262,9 @@ class REVOResampler(CloneMergeResampler):
                     # (min_idx, or closewalk)
                     # keeps closewalk and gets rid of min_idx
 
-                    #r = rand.uniform(0.0, new_walker_weights[closewalk] + new_walker_weights[min_idx])
+                    r = rand.uniform(0.0, new_walker_weights[closewalk] + new_walker_weights[min_idx])
 
-                    if distance_arr[min_idx] < distance_arr[closewalk]:
+                    if r < new_walker_weights[closewalk]:
                         keep_idx = closewalk
                         squash_idx = min_idx
 

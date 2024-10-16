@@ -610,14 +610,14 @@ FIELD_FEATURE_SHAPES = ((TIME, (1,)),
                         )
 """Default shapes for the default fields."""
 
-FIELD_FEATURE_DTYPES = ((POSITIONS, np.float),
-                        (VELOCITIES, np.float),
-                        (FORCES, np.float),
-                        (TIME, np.float),
-                        (BOX_VECTORS, np.float),
-                        (BOX_VOLUME, np.float),
-                        (KINETIC_ENERGY, np.float),
-                        (POTENTIAL_ENERGY, np.float),
+FIELD_FEATURE_DTYPES = ((POSITIONS, float),
+                        (VELOCITIES, float),
+                        (FORCES, float),
+                        (TIME, float),
+                        (BOX_VECTORS, float),
+                        (BOX_VOLUME, float),
+                        (KINETIC_ENERGY, float),
+                        (POTENTIAL_ENERGY, float),
                         )
 """Default data types for the default fields."""
 

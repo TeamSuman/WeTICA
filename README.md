@@ -29,13 +29,13 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 ## Usage
 
-First install OpenMM and MDTraj.
+First install OpenMM and other dependencies.
 
       conda create -n openmm python==3.9
       conda activate openmm
       conda install -c conda-forge openmm=8.0.0
       conda install -c conda-forge mdtraj=1.9.9
-      pip install h5py networkx
+      pip install h5py networkx tabulate Jinja2 pint
       pip install eliot==1.14.0
 
 Clone this repository in the local machine or HPC. Go to the "Scripts" folder of this repository and run the WeTICA.py script with the necessary command line arguments as showcased below:

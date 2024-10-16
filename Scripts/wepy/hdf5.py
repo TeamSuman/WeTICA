@@ -994,7 +994,7 @@ class WepyHDF5(object):
         # alt_reps settings
         alt_reps_idxs_grp = settings_grp.create_group(ALT_REPS_IDXS)
         for alt_rep_name, idxs in self._alt_reps.items():
-            alt_reps_idxs_grp.create_dataset(alt_rep_name, data=idxs, dtype=np.int)
+            alt_reps_idxs_grp.create_dataset(alt_rep_name, data=idxs, dtype=int)
 
         # if both feature shapes and dtypes were specified overwrite
         # (or initialize if not set by defaults) the defaults
@@ -1187,7 +1187,7 @@ class WepyHDF5(object):
 
         # otherwise we just create the data
         else:
-            cont_dset = self.settings_grp.create_dataset(CONTINUATIONS, shape=(0,2), dtype=np.int,
+            cont_dset = self.settings_grp.create_dataset(CONTINUATIONS, shape=(0,2), dtype=int,
                                     maxshape=(None, 2))
 
         return cont_dset
@@ -1276,7 +1276,7 @@ class WepyHDF5(object):
 
         # initialize the cycles dataset that maps when the records
         # were recorded
-        record_grp.create_dataset(CYCLE_IDXS, (0,), dtype=np.int,
+        record_grp.create_dataset(CYCLE_IDXS, (0,), dtype=int,
                                   maxshape=(None,))
 
         # for each field simply create the dataset
@@ -1473,7 +1473,7 @@ class WepyHDF5(object):
                                maxshape=(None, *shape))
 
             # create the dataset for the sparse indices
-            sparse_grp.create_dataset(SPARSE_IDXS, (0,), dtype=np.int, maxshape=(None,))
+            sparse_grp.create_dataset(SPARSE_IDXS, (0,), dtype=int, maxshape=(None,))
 
 
     def _init_traj_fields(self, run_idx, traj_idx,

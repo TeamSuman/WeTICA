@@ -3,9 +3,9 @@ import os
 import os.path as osp
 import pickle as pkl
 
-import openmm.app as omma
-import openmm as omm
-import openmm.unit as unit
+import simtk.openmm.app as omma
+import simtk.openmm as omm
+import simtk.unit as unit
 
 import mdtraj as mdj
 
@@ -55,7 +55,6 @@ parser.add_argument("-pair", type=str, help="File containing indices of selected
 parser.add_argument("-dist1", type=float, help="Merge distance cut-off (unitless) [Optional, default=1.0]",required=False, default=1.0)
 parser.add_argument("-dist2", type=float, help="Warped distance cut-off (unitless) [Optional, default=0.25]",required=False, default=0.25)
 parser.add_argument("-tem", type=float, help="Temperature in Kelvin [Optional, default=300]",required=False, default=300)
-parser.add_argument("-ngpu", type=int, help="Number of available GPU cards", required=True)
 parser.add_argument("-gid", type=int, help="GPU ids", required=True, nargs='+')
 args = parser.parse_args()
 
@@ -73,9 +72,9 @@ sel_feat =  args.feat
 atompairs = args.pair                  
 d_merge =  args.dist1                                
 d_warped = args.dist2 
-temp = args.tem                              
-n_gpu    = args.ngpu                                
-gpu_ids  =  args.gid 
+temp = args.tem                                                            
+gpu_ids  =  args.gid
+n_gpu = int(len(gpu_ids))
 
 
 ##-------------------------------------------------------- End ------------------------------------------------------##

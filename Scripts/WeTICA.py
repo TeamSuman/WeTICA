@@ -25,7 +25,7 @@ import argparse
 
 from Features import SelectedAtomsPairwise_distance, All_CACAdistance
 from DistanceMetric import InvDist_FromRef 
-from REVOResampler_new import REVOResampler
+from REVO2 import REVOResampler
 from warped import TargetBC
 
 

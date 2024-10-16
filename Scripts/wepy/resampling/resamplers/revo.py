@@ -93,7 +93,7 @@ class REVOResampler(CloneMergeResampler):
     # fields for resampler data
     RESAMPLING_FIELDS = CloneMergeResampler.RESAMPLING_FIELDS
     RESAMPLING_SHAPES = CloneMergeResampler.RESAMPLING_SHAPES #+ (Ellipsis,)
-    RESAMPLING_DTYPES = CloneMergeResampler.RESAMPLING_DTYPES #+ (np.int,)
+    RESAMPLING_DTYPES = CloneMergeResampler.RESAMPLING_DTYPES #+ (int,)
 
 
     # fields that can be used for a table like representation
@@ -105,7 +105,7 @@ class REVOResampler(CloneMergeResampler):
     RESAMPLER_SHAPES = CloneMergeResampler.RESAMPLER_SHAPES + \
                        ((1,), Ellipsis, (1,), Ellipsis, Ellipsis)
     RESAMPLER_DTYPES = CloneMergeResampler.RESAMPLER_DTYPES + \
-                       (np.int, np.float, np.float, np.int, None)
+                       (int, float, float, int, None)
 
     # fields that can be used for a table like representation
     RESAMPLER_RECORD_FIELDS = CloneMergeResampler.RESAMPLER_RECORD_FIELDS + \

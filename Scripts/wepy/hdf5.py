@@ -598,7 +598,7 @@ OBSERVABLES = 'observables'
 WEIGHT_SHAPE = (1,)
 """Weights feature vector shape."""
 
-WEIGHT_DTYPE = np.float
+WEIGHT_DTYPE = float
 """Weights feature vector data type."""
 
 # Default Trajectory Field Constants

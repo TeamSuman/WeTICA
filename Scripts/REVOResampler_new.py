@@ -3,7 +3,6 @@ import random as rand
 import itertools as it
 
 import logging
-from eliot import start_action, log_call
 
 import numpy as np
 
@@ -352,8 +351,6 @@ class REVOResampler(CloneMergeResampler):
 
         return dl, [walker_dists for walker_dists in dist_mat], images
 
-    @log_call(include_args=[],
-              include_result=False)
     def resample(self, walkers):
         """Resamples walkers based on REVO algorithm
 

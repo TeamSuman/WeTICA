@@ -37,6 +37,7 @@ Inside the "Scripts" folder of this repository, several python files are there. 
 
       pandas <= 2.1.4
       numpy >= 2.1.0
+      openmm >= 8.0.0
 
 The command line options are showcased below:
 

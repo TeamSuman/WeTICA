@@ -34,9 +34,9 @@ from eliot import log_call, start_action
 import numpy as np
 
 try:
-    import simtk.openmm.app as omma
-    import simtk.openmm as omm
-    import simtk.unit as unit
+    import openmm.app as omma
+    import openmm as omm
+    import openmm.unit as unit
 except ModuleNotFoundError:
     raise ModuleNotFoundError("OpenMM has not been installed, which this runner requires.")
 

@@ -35,6 +35,7 @@ First install OpenMM and MDTraj.
       conda activate openmm
       conda install -c conda-forge openmm=8.0.0
       conda install -c conda-forge mdtraj=1.9.9
+      pip install eliot==1.14.0
 
 Clone this repository in the local machine or HPC. Go to the "Scripts" folder of this repository and run the WeTICA.py script with the necessary command line arguments as showcased below:
 

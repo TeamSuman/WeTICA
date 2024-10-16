@@ -989,7 +989,7 @@ class WepyHDF5(object):
         settings_grp.create_dataset(N_ATOMS, data=np.array(self._n_coords))
 
         # the main rep atom idxs
-        settings_grp.create_dataset(MAIN_REP_IDXS, data=self._main_rep_idxs, dtype=np.int)
+        settings_grp.create_dataset(MAIN_REP_IDXS, data=self._main_rep_idxs, dtype=int)
 
         # alt_reps settings
         alt_reps_idxs_grp = settings_grp.create_group(ALT_REPS_IDXS)

@@ -20,8 +20,6 @@ from walker_pkl_reporter import WalkersPickleReporter
 from wepy.reporter.dashboard import DashboardReporter
 from wepy.reporter.openmm import OpenMMRunnerDashboardSection
 
-
-import pandas as pd
 import numpy as np
 import argparse
 
@@ -127,19 +125,14 @@ if __name__ == "__main__":
     ref = mdj.load(tar_path)
 
     # Eigenvectors
-    eigenvector_file = pd.read_csv(f'{inp_path}/'+eigen, sep='\t', header=None)
     eigenvectors = []
     for i in vec_list:
-        eigenvectors.append(np.array(eigenvector_file.iloc[:,i]))
+        eigenvectors.append(np.loadtxt(f'{inp_path}/'+eigen, unpack=True, usecols=(i)))
 
     if sel_feat == "sel_pair":
 
-        # Read atom pairs file
-        pair_file = pd.read_csv(f'{inp_path}/'+atompairs, sep='\t', header=None)
-
         # Atom pair indices
-        atom_id1 = np.array(pair_file.iloc[:,0])
-        atom_id2 = np.array(pair_file.iloc[:,1])
+        atom_id1, atom_id2 = np.loadtxt(f'{inp_path}/'+atompairs, unpack=True)
         atom_indexs = [atom_id1, atom_id2]
 
         # Projection of the reference state

@@ -31,11 +31,11 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 First install the WEPY weighted ensemble software following the installation guide provided below.
 
-      conda create -n wepy python==3.9
+      conda create -n wepy python==3.10
       conda activate wepy
       pip install git+https://github.com/ADicksonLab/wepy.git
       conda install -c conda-forge openmm=8.0.0
-      conda install -c conda-forge mdtraj=1.9.7
+      conda install -c conda-forge mdtraj=1.9.9
       pip install eliot
 
 Inside the "Scripts" folder of this repository, several python files are there. The main script is the WeTICA.py. Download all the python files from this folder and put them together inside a folder in the local machine or HPC. Activate the WEPY environment and run the WeTICA.py script with the necessary command line arguments as described below. Note that all the available arguments are not needed to specify explicitly. Many optional arguments are there with default values. 

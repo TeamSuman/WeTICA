@@ -33,6 +33,7 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 ## Usage
 
+#### step-1
 First install OpenMM and other dependencies.
 
       conda create -n openmm python==3.9 numpy==1.25.2 pandas==1.3.5
@@ -40,10 +41,13 @@ First install OpenMM and other dependencies.
       conda install -c conda-forge openmm=8.0.0 mdtraj=1.9.9
       pip install h5py==3.12.1 networkx==3.2.1 tabulate==0.9.0 Jinja2==3.1.4 pint==0.24.3 eliot==1.14.0
 
+#### step-2
 Clone this repository in the local machine or HPC. 
 
       git clone https://github.com/TeamSuman/WeTICA.git
 
+
+#### step-3
 Go to the "Scripts" folder of this repository and run the WeTICA.py script with the necessary command line arguments as showcased below:
 
       python WeTICA.py -h
@@ -80,7 +84,7 @@ Go to the "Scripts" folder of this repository and run the WeTICA.py script with 
     
       -gid GID [GID ...]  GPU ids
 
-#### Example
+##### Example
 
 This example showcases the use of WeTICA.py script to study the unfolding of Protein G using the first two eigenvectors (specified as: -vid 0 1) as the collective variables (CVs).
 

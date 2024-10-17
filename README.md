@@ -88,11 +88,11 @@ If yes, there is posibility that some walkers reach the target. Now its time for
 
 ## Data Analysis
 
-To compute the kinetic observables, a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
+To compute the Mean first passage time (MFPT), a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
 
     A) Convergence check
-    B) Mean first passage time (MFPT) calculation
+    B) MFPT calculation
     C) Generation of WE productive trajectory
 
-Open the notebook and follow the instructions to calculate the above mentioned quantities. No major a priori knowledge about the HDF5 file is required to run the notebook.
+For further information, visit wepy documentation (https://adicksonlab.github.io/wepy/_source/tutorials/data_analysis/index.html).
 

@@ -8,7 +8,7 @@ from wepy.walker import WalkerState
 
 from wepy.boundary_conditions.boundary import BoundaryConditions
 
-from Features import SelectedAtomsPairwise_distance, All_CACAdistance
+from new.features import SelectedAtomsPairwise_distance, All_CACAdistance
 
 class ReceptorBC(BoundaryConditions):
     """Abstract base class for boundary conditions.

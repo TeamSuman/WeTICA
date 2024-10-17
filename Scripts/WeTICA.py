@@ -23,9 +23,9 @@ from wepy.reporter.openmm import OpenMMRunnerDashboardSection
 import numpy as np
 import argparse
 
-from new.Features import SelectedAtomsPairwise_distance, All_CACAdistance
-from new.DistanceMetric import InvDist_FromRef 
-from new.REVO2 import REVOResampler
+from new.features import SelectedAtomsPairwise_distance, All_CACAdistance
+from new.metric import InvDist_FromRef 
+from new.revo2 import REVOResampler
 from new.warped import TargetBC
 
 

@@ -1,7 +1,7 @@
 import numpy as np
 import scipy as sp
 from wepy.resampling.distances.distance import Distance
-from Features import SelectedAtomsPairwise_distance, All_CACAdistance
+from new.Features import SelectedAtomsPairwise_distance, All_CACAdistance
 
 
 

@@ -7,7 +7,7 @@ WEPY (https://adicksonlab.github.io/wepy/index.html)
 OpenMM (https://openmm.org)
 
 
-## Data Preparation
+## Input Data Preparation
 
 To start WeTICA weighted ensemble simulation, at least 4 major files are required. Example files are provided in the "Systems" folder of this repository.
 

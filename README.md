@@ -28,8 +28,8 @@ If CHARMM-GUI is used to prepare system and topology, files in GROMACS format ca
 #### Note 3
 Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pairwise distances ('allCA'), 2) User selected atom pairwise distances ('sel_pair'). To maintain consistency in calculations, both the eigenvector generation and the simulation should be performed using the same feature.
 
-#### Note 3
-0 based selected atom ids are required for the 'sel_pair' featurization scheme. This file is not required for the 'allCA' feature.
+#### Note 4
+0 based selected atom ids (MDTraj convetion) are required for the 'sel_pair' featurization scheme. This file is not required for the 'allCA' feature.
 
 
 

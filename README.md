@@ -31,7 +31,7 @@ Note 3. 0 based selected atom ids are required for the 'sel_pair' featurization 
 
 First install OpenMM and other dependencies.
 
-      conda create -n openmm python==3.9 numpy==1.26.4 pandas==1.9.0
+      conda create -n openmm python==3.9 numpy==1.26.4 pandas==1.3.5
       conda activate openmm
       conda install -c conda-forge openmm=8.0.0 mdtraj=1.9.9
       pip install h5py==3.12.1 networkx==3.2.1 tabulate==0.9.0 Jinja2==3.1.4 pint==0.24.3 eliot==1.14.0

@@ -1,6 +1,9 @@
 # WeTICA
 
-WeTICA is a binless weighted ensemble based enhanced sampling method to study rare event kinetics on a predefined linear CV space. It uses WEPY weighted ensemble software & OpenMM MD engine to run and store simulation data (https://adicksonlab.github.io/wepy/index.html).
+WeTICA is a binless weighted ensemble based enhanced sampling method to study rare event kinetics on a predefined linear CV space. It uses WEPY weighted ensemble software & OpenMM MD engine to run and store simulation data.
+
+WEPY (https://adicksonlab.github.io/wepy/index.html)
+OpenMM (https://openmm.org)
 
 
 ## Data Preparation

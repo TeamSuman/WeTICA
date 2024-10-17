@@ -9,13 +9,15 @@ OpenMM (https://openmm.org)
 
 ## Input Data Preparation
 
-To start WeTICA weighted ensemble simulation, at least 4 major files are required. Example files are provided in the "Systems" folder of this repository.
+To start WeTICA simulation, at least 4 major files are required.
 
 1) An equilibrated, neutrilize and solvated initial structure file in GROMACS .gro format.
 2) System topology file in GROMACS .top format.
 3) Target structure file in GROMACS .gro format.
 4) An eigenvector file in .txt format where each column represents one eigenvector.
 5) A file containing the pairwise selected atom ids in .txt format (Optional).
+
+Example files are provided in the "Systems" folder of this repository.
 
 #### Note 1 
 If AmberTools is used to prepare system and topology files, use the following command to convert the amber structure and topology to GROMACS format.

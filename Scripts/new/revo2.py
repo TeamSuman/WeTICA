@@ -370,7 +370,7 @@ class REVOResampler(CloneMergeResampler):
 
 
         file = open(f'{self.path}/Info_{self.run_id}.txt', 'a')
-        file.write(f'Clst walk. id: {cw_id}'+'\t'+f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\n')
+        file.write(f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\n')
         file.close()
 
         # convert the target idxs and decision_id to feature vector arrays

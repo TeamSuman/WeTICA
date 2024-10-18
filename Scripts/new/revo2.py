@@ -298,8 +298,6 @@ class REVOResampler(CloneMergeResampler):
             happen = True
         else:
             happen = False
-        #happen = np.array_equal(new_walker_weights, walker_weights)
-        #happen = not happen
 
         return walker_actions, variations[-1], happen
 

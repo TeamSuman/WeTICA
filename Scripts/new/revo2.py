@@ -124,7 +124,7 @@ class REVOResampler(CloneMergeResampler):
 
         return variation, walker_variations
 
-    def decide(self, walker_weights, num_walker_copies, distance_arr, distance_matrix, cut_dist):
+    def decide(self, walker_weights, num_walker_copies, distance_arr, distance_matrix):
         """
         Optimize the trajectory variation by making decisions for resampling.
 
@@ -357,7 +357,7 @@ class REVOResampler(CloneMergeResampler):
         distance_arr, distance_matrix, images = self.get_dist(walkers)
 
         # cutoff distance
-        cut_dist = np.median(distance_arr)
+        #cut_dist = np.median(distance_arr)
 
         # Closest walker info
         cw_id = np.where(distance_arr == np.max(distance_arr))[0][0]
@@ -366,7 +366,7 @@ class REVOResampler(CloneMergeResampler):
 
         # determine cloning and merging actions to be performed, by
         # maximizing the variation, i.e. the Decider
-        resampling_data, variation, happen = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix, cut_dist)
+        resampling_data, variation, happen = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
 
 
         file = open(f'{self.path}/Info_{self.run_id}.txt', 'a')

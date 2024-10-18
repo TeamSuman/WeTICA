@@ -44,6 +44,7 @@ class REVOResampler(CloneMergeResampler):
                  run_id=None,
                  merge_dist=None,
                  pmax=0.25,
+                 pmin=1e-12,
                  init_state=None,
                  seed=None,
                  path=None,
@@ -73,7 +74,7 @@ class REVOResampler(CloneMergeResampler):
         # call the init methods in the CloneMergeResampler
         # superclass. We set the min and max number of walkers to be
         # constant
-        super().__init__(pmax=pmax,
+        super().__init__(pmin=pmin, pmax=pmax,
                          min_num_walkers=Ellipsis,
                          max_num_walkers=Ellipsis,
                          **kwargs)
@@ -167,6 +168,7 @@ class REVOResampler(CloneMergeResampler):
                 # 1. must have an amp >=1 which gives the number of clones to be made of it
                 # 2. must not already be a keep merge target
                 if (new_num_walker_copies[i] >= 1) and \
+                   (new_walker_weights[i]/(new_num_walker_copies[i] + 1) > self.pmin) and \
                    (len(merge_groups[i]) == 0):
                     max_tups.append((value, i))
 

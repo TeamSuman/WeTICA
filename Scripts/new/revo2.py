@@ -294,7 +294,7 @@ class REVOResampler(CloneMergeResampler):
             walker_record['step_idx'] = np.array([0])
             walker_record['walker_idx'] = np.array([walker_idx])
 
-        if (variations[-1] >= variations[0]):
+        if (variations[-1] > variations[0]):
             happen = True
         else:
             happen = False

@@ -195,9 +195,10 @@ class REVOResampler(CloneMergeResampler):
 
                 # remove those walkers that if they were merged with
                 # the min walker_variations walker would violate the pmax
+                # and walkers should be further away from target
                 closewalks = [idx for idx in closewalks
                                       if (new_num_walker_copies[idx]==1) and
-                                       (new_walker_weights[idx] + new_walker_weights[min_idx] < self.pmax)
+                                       (new_walker_weights[idx] + new_walker_weights[min_idx] < self.pmax) and (distance_arr[idx] < cut_dist)
                                       ]
 
                 # if there are any walkers left, create a list of them

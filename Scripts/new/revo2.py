@@ -179,7 +179,7 @@ class REVOResampler(CloneMergeResampler):
             # walker with the lowest walker_variations 
             # will be tagged for merging (stored in min_idx)
             min_tups = [(value, i) for i,value in enumerate(walker_variations)
-                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1))]
+                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1)]
 
             if len(min_tups) > 0:
                 min_value, min_idx = min(min_tups)

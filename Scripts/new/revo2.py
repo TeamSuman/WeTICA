@@ -167,9 +167,8 @@ class REVOResampler(CloneMergeResampler):
             for i, value in enumerate(walker_variations):
                 # 1. must have an amp >=1 which gives the number of clones to be made of it
                 # 2. must not already be a keep merge target
-                if (new_num_walker_copies[i] >= 1) and \
+                if (2 >= new_num_walker_copies[i] >= 1) and \
                    (new_walker_weights[i]/(new_num_walker_copies[i] + 1) > self.pmin) and \
-                   (distance_arr[i] > cut_dist) and \
                    (len(merge_groups[i]) == 0):
                     max_tups.append((value, i))
 

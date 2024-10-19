@@ -60,7 +60,7 @@ Go to the "Scripts" folder of this repository and run the WeTICA.py script with 
   
       -dire DIRE          Full PATH of the directory containing system related input files
   
-      -num NUM            Number of walkers [Optional, default=60]
+      -num NUM            Number of walkers [Optional, default=16]
   
       -rid RID            Run index
   

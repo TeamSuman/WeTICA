@@ -303,7 +303,7 @@ class REVOResampler(CloneMergeResampler):
         else:
             happen = False
 
-        return walker_actions, variations[-1], happen
+        return walker_actions, variations[-1], happen, new_num_walker_copies.count(2)
 
     def get_dist(self, walkers):
 
@@ -369,11 +369,11 @@ class REVOResampler(CloneMergeResampler):
 
         # determine cloning and merging actions to be performed, by
         # maximizing the variation, i.e. the Decider
-        resampling_data, variation, happen = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
+        resampling_data, variation, happen, nsplit = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
 
 
         file = open(f'{self.path}/Info_{self.run_id}.txt', 'a')
-        file.write(f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\n')
+        file.write(f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\t'+f'Number of splitting: {nsplit}'+'\n')
         file.close()
 
         # convert the target idxs and decision_id to feature vector arrays

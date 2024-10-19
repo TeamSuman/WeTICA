@@ -124,7 +124,7 @@ class REVOResampler(CloneMergeResampler):
 
         return variation, walker_variations
 
-    def decide(self, walker_weights, num_walker_copies, distance_arr, distance_matrix, cut_dist):
+    def decide(self, walker_weights, num_walker_copies, distance_arr, distance_matrix):
         """
         Optimize the trajectory variation by making decisions for resampling.
 
@@ -179,8 +179,7 @@ class REVOResampler(CloneMergeResampler):
             # walker with the lowest walker_variations 
             # will be tagged for merging (stored in min_idx)
             min_tups = [(value, i) for i,value in enumerate(walker_variations)
-                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1) and \
-                        (distance_arr[i] < cut_dist)]
+                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1)]
 
             if len(min_tups) > 0:
                 min_value, min_idx = min(min_tups)
@@ -199,8 +198,7 @@ class REVOResampler(CloneMergeResampler):
                 # and walkers should be away from target
                 closewalks = [idx for idx in closewalks
                                       if (new_num_walker_copies[idx]==1) and
-                                       (new_walker_weights[idx] + new_walker_weights[min_idx] < self.pmax) and (distance_arr[idx] < cut_dist)
-                                      ]
+                                       (new_walker_weights[idx] + new_walker_weights[min_idx] < self.pmax)]
 
                 # if there are any walkers left, create a list of them
                 if len(closewalks) > 0:
@@ -360,9 +358,6 @@ class REVOResampler(CloneMergeResampler):
         # calculate  distances
         distance_arr, distance_matrix, images = self.get_dist(walkers)
 
-        # cutoff distance
-        cut_dist = np.median(distance_arr)
-
         # Closest walker info
         cw_id = np.where(distance_arr == np.max(distance_arr))[0][0]
         cw_dist = distance_arr[cw_id]
@@ -370,7 +365,7 @@ class REVOResampler(CloneMergeResampler):
 
         # determine cloning and merging actions to be performed, by
         # maximizing the variation, i.e. the Decider
-        resampling_data, variation, happen, nsplit = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix, cut_dist)
+        resampling_data, variation, happen, nsplit = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
 
 
         file = open(f'{self.path}/Info_{self.run_id}.txt', 'a')

@@ -201,7 +201,7 @@ class REVOResampler(CloneMergeResampler):
                 closewalks = [idx for idx in closewalks
                                       if (new_num_walker_copies[idx]==1) and
                                        (new_walker_weights[idx] + new_walker_weights[min_idx] < self.pmax) and (distance_arr[idx] < cut_dist)
-                                      and (idx not in keep_idx_list == True)]
+                                      ]
 
                 # if there are any walkers left, create a list of them
                 if len(closewalks) > 0:

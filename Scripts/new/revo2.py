@@ -133,7 +133,6 @@ class REVOResampler(CloneMergeResampler):
         num_walkers = len(walker_weights)
 
         variations = []
-        keep_idx_list = []
         merge_groups = [[] for i in range(num_walkers)]
         walker_clone_nums = [0 for i in range(num_walkers)]
 
@@ -181,7 +180,7 @@ class REVOResampler(CloneMergeResampler):
             # will be tagged for merging (stored in min_idx)
             min_tups = [(value, i) for i,value in enumerate(walker_variations)
                         if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1) and \
-                        (distance_arr[i] < cut_dist) and (i not in keep_idx_list == True)]
+                        (distance_arr[i] < cut_dist)]
 
             if len(min_tups) > 0:
                 min_value, min_idx = min(min_tups)
@@ -256,9 +255,6 @@ class REVOResampler(CloneMergeResampler):
                     # update new_num_walker_copies
                     new_num_walker_copies[squash_idx] = 0
                     new_num_walker_copies[keep_idx] = 1
-
-                    # store the index of the surviving walker
-                    keep_idx_list.append(keep_idx)
 
                     # add the squash index to the merge group
                     merge_groups[keep_idx].append(squash_idx)

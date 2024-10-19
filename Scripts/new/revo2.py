@@ -13,7 +13,7 @@ from wepy.resampling.decisions.clone_merge import MultiCloneMergeDecision
 class REVOResampler(CloneMergeResampler):
     r"""
 
-    Resampler implementing the REVO algorithm.
+    Resampler implementing the new REVO algorithm.
 
     """
 

@@ -224,7 +224,7 @@ class REVOResampler(CloneMergeResampler):
                 # re-determine variation function, and walker_variations values
                 new_variation, walker_variations = self._calcvariation(new_walker_weights, new_num_walker_copies, distance_arr)
 
-                if new_variation >= variation:
+                if new_variation > variation:
                     variations.append(new_variation)
 
                     logging.info("Variance move to {} accepted".format(new_variation))

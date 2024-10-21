@@ -216,9 +216,12 @@ class REVOResampler(CloneMergeResampler):
             if condition_list.all() :
 
                 # change new_amp
-                tempsum = new_walker_weights[min_idx] + new_walker_weights[closewalk]
-                new_num_walker_copies[min_idx] = new_walker_weights[min_idx]/tempsum
-                new_num_walker_copies[closewalk] = new_walker_weights[closewalk]/tempsum
+                if (distance_arr[min_idx] > distance_arr[closewalk]):
+                    new_num_walker_copies[min_idx] = 1
+                    new_num_walker_copies[closewalk] = 0
+                else:
+                    new_num_walker_copies[min_idx] = 0
+                    new_num_walker_copies[closewalk] = 1
                 new_num_walker_copies[max_idx] += 1
 
                 # re-determine variation function, and walker_variations values
@@ -298,7 +301,7 @@ class REVOResampler(CloneMergeResampler):
             walker_record['step_idx'] = np.array([0])
             walker_record['walker_idx'] = np.array([walker_idx])
 
-        if (variations[-1] > variations[0]):
+        if (new_num_walker_copies.count(2) != 0):
             happen = True
         else:
             happen = False

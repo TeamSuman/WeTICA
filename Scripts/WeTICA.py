@@ -40,7 +40,7 @@ from new.warped import TargetBC
 
 parser = argparse.ArgumentParser(description="Usage: python WeTICA.py [Options]\n")
 parser.add_argument("-dire", type=str, help="Full PATH of the directory containing system related input files",required=True)
-parser.add_argument("-num", type=int, help="Number of walkers [Optional, default=32]",required=False, default=32)
+parser.add_argument("-num", type=int, help="Number of walkers [Optional, default=24]",required=False, default=24)
 parser.add_argument("-rid", type=int, help="Run index",required=True)
 parser.add_argument("-steps",  type=int, help="Number of MD steps between two consecutive resampling processes [optional, default=10000 -> 20 ps]",required=False, default=10000)
 parser.add_argument("-cyc", type=int, help="Total number of cycles in each run [optional, default=20000]",required=False, default=20000)

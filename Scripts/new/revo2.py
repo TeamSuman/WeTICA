@@ -203,7 +203,8 @@ class REVOResampler(CloneMergeResampler):
 
                 # if there are any walkers left, create a list of them
                 if len(closewalks) > 0:
-                    closewalks_dists = [(distance_matrix[min_idx][i], i) for i in closewalks if distance_matrix[min_idx][i] <= (self.merge_dist) and (keep_ids_list.count(i) == 0)]
+                    closewalks_dists = [(distance_matrix[min_idx][i], i) for i in closewalks if distance_matrix[min_idx][i] <= (self.merge_dist) and (keep_ids_list.count(i) == 0) and \
+                                       (distance_arr[i] > distance_arr[min_idx])]
 
                     # if any were found set this as the closewalk
                     if len(closewalks_dists) > 0:

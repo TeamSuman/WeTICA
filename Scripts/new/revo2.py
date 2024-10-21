@@ -133,7 +133,6 @@ class REVOResampler(CloneMergeResampler):
         num_walkers = len(walker_weights)
 
         variations = []
-        keep_ids_list = []
         merge_groups = [[] for i in range(num_walkers)]
         walker_clone_nums = [0 for i in range(num_walkers)]
 
@@ -180,7 +179,7 @@ class REVOResampler(CloneMergeResampler):
             # walker with the lowest walker_variations 
             # will be tagged for merging (stored in min_idx)
             min_tups = [(value, i) for i,value in enumerate(walker_variations)
-                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1) and (keep_ids_list.count(i) == 0)]
+                        if (new_num_walker_copies[i] == 1) and (new_walker_weights[i] < self.pmax)  and (np.sum(distance_matrix[i] <= self.merge_dist) >= 1)]
 
             if len(min_tups) > 0:
                 min_value, min_idx = min(min_tups)
@@ -203,8 +202,7 @@ class REVOResampler(CloneMergeResampler):
 
                 # if there are any walkers left, create a list of them
                 if len(closewalks) > 0:
-                    closewalks_dists = [(distance_matrix[min_idx][i], i) for i in closewalks if distance_matrix[min_idx][i] <= (self.merge_dist) and (keep_ids_list.count(i) == 0) and \
-                                       (distance_arr[i] > distance_arr[min_idx])]
+                    closewalks_dists = [(distance_matrix[min_idx][i], i) for i in closewalks if distance_matrix[min_idx][i] <= (self.merge_dist)]
 
                     # if any were found set this as the closewalk
                     if len(closewalks_dists) > 0:
@@ -251,9 +249,6 @@ class REVOResampler(CloneMergeResampler):
                     # update weight
                     new_walker_weights[keep_idx] += new_walker_weights[squash_idx]
                     new_walker_weights[squash_idx] = 0.0
-
-                    # store the surviving walkers
-                    keep_ids_list.append(keep_idx)
 
                     # update new_num_walker_copies
                     new_num_walker_copies[squash_idx] = 0

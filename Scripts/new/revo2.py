@@ -208,7 +208,7 @@ class REVOResampler(CloneMergeResampler):
 
                     # if any were found set this as the closewalk
                     if len(closewalks_dists) > 0:
-                        closedist, closewalk = min(closewalks_dists)
+                        closedist, closewalk = rand.choice(closewalks_dists)
 
 
             # did we find a closewalk?

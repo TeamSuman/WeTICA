@@ -104,10 +104,10 @@ class REVOResampler(CloneMergeResampler):
             rand.seed(seed)
     
 
-    def _calcvariation(self, walker_weights, num_walker_copies, distance_arr):
+    def _calcvariation(self, num_walker_copies, distance_arr):
         
 
-        num_walkers = len(walker_weights)
+        num_walkers = len(distance_arr)
 
 
         # the walker variation values (Vi values) and variation
@@ -143,8 +143,7 @@ class REVOResampler(CloneMergeResampler):
 
 
         # calculate the initial variation which will be optimized
-        variation, walker_variations = self._calcvariation(walker_weights,
-                                                           new_num_walker_copies,
+        variation, walker_variations = self._calcvariation(new_num_walker_copies,
                                                            distance_arr)
         variations.append(variation)
 
@@ -152,8 +151,10 @@ class REVOResampler(CloneMergeResampler):
         logging.info("Starting variance optimization: {}".format(variation))
 
         productive = True
-        while productive:
+        another_trail = True
+        while productive == True or another_trail == True:
             productive = False
+            another_trail = False
             # find min and max walker_variationss, alter new_amp
 
             # initialize to None, we may not find one of each
@@ -216,18 +217,23 @@ class REVOResampler(CloneMergeResampler):
             if condition_list.all() :
 
                 # change new_amp
-                if (distance_arr[min_idx] > distance_arr[closewalk]):
-                    new_num_walker_copies[min_idx] = 1
-                    new_num_walker_copies[closewalk] = 0
+                r = rand.uniform(0.0, new_walker_weights[closewalk] + new_walker_weights[min_idx])
+                if (r < new_walker_weights[closewalk]):
+                    keep_idx = closewalk
+                    squash_idx = min_idx
                 else:
-                    new_num_walker_copies[min_idx] = 0
-                    new_num_walker_copies[closewalk] = 1
+                    keep_idx = min_idx
+                    squash_idx = closewalk
+
+                # update new_num_walker_copies
+                new_num_walker_copies[squash_idx] = 0
+                new_num_walker_copies[keep_idx] = 1
                 new_num_walker_copies[max_idx] += 1
 
                 # re-determine variation function, and walker_variations values
-                new_variation, walker_variations = self._calcvariation(new_walker_weights, new_num_walker_copies, distance_arr)
+                new_variation, walker_variations = self._calcvariation(new_num_walker_copies, distance_arr)
 
-                if new_variation > variation:
+                if new_variation > variation: # resampling is possible with these choices of walkers
                     variations.append(new_variation)
 
                     logging.info("Variance move to {} accepted".format(new_variation))
@@ -235,31 +241,12 @@ class REVOResampler(CloneMergeResampler):
                     productive = True
                     variation = new_variation
 
-                    # make a decision on which walker to keep
-                    # (min_idx, or closewalk)
-                    # keeps closewalk and gets rid of min_idx
-
-                    r = rand.uniform(0.0, new_walker_weights[closewalk] + new_walker_weights[min_idx])
-
-                    if r < new_walker_weights[closewalk]:
-                        keep_idx = closewalk
-                        squash_idx = min_idx
-
-                    # keep min_idx, get rid of closewalk
-                    else:
-                        keep_idx = min_idx
-                        squash_idx = closewalk
-
                     # update weight
                     new_walker_weights[keep_idx] += new_walker_weights[squash_idx]
                     new_walker_weights[squash_idx] = 0.0
 
                     # store the surviving walkers
                     keep_ids_list.append(keep_idx)
-
-                    # update new_num_walker_copies
-                    new_num_walker_copies[squash_idx] = 0
-                    new_num_walker_copies[keep_idx] = 1
 
                     # add the squash index to the merge group
                     merge_groups[keep_idx].append(squash_idx)
@@ -275,12 +262,6 @@ class REVOResampler(CloneMergeResampler):
                     # walker has
                     walker_clone_nums[max_idx] += 1
 
-                    # new variation for starting new stage
-                    new_variation, walker_variations = self._calcvariation(new_walker_weights,
-                                                                          new_num_walker_copies,
-                                                                          distance_arr)
-                    variations.append(new_variation)
-
                     logging.info("variance after selection: {}".format(new_variation))
 
                 # if not productive
@@ -288,6 +269,7 @@ class REVOResampler(CloneMergeResampler):
                     new_num_walker_copies[min_idx] = 1
                     new_num_walker_copies[closewalk] = 1
                     new_num_walker_copies[max_idx] -= 1
+                    another_trial = True
 
         # given we know what we want to clone to specific slots
         # (squashing other walkers) we need to determine where these

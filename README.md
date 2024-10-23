@@ -82,9 +82,9 @@ Go to the "Scripts" folder of this repository and run the WeTICA.py script with 
   
       -pair PAIR          File containing indices of selected atoms [Optional, but required for 'sel_pair' feature]
   
-      -dist1 DIST1        Merge distance cut-off (unitless) [Optional, default=1.0]
+      -dist1 DIST1        Merge distance cut-off (unitless) [Optional, default=0.5]
   
-      -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.25]
+      -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.75]
   
       -tem TEM            Temperature in Kelvin [Optional, default=300]
     

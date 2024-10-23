@@ -45,7 +45,8 @@ Clone this repository in the local machine or HPC.
       git clone https://github.com/TeamSuman/WeTICA.git
 
 #### step-2
-Follow the commands:
+Follow the commands.
+
       cd WeTICA
       conda create --name wepy
       conda activate wepy

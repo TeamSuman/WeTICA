@@ -44,7 +44,7 @@ First install OpenMM and other dependencies.
 
       conda create -n openmm python==3.7.13 numpy==1.21.5 pandas==1.3.5
       conda activate openmm
-      conda install -c conda-forge openmm=7.5.1 mdtraj=1.9.9
+      conda install -c conda-forge openmm=7.5.1 mdtraj=1.9.7
       pip install h5py==2.10.0 networkx==2.3 tabulate==0.9.0 Jinja2==3.1.2 pint==0.18 eliot==1.14.0
 
 #### step-2

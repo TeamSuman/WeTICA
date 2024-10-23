@@ -38,14 +38,13 @@ Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pai
 
 
 ## Usage
+Follow the instructions step-by-step.
 
-#### step-1
-Clone this repository in the local machine or HPC. 
+#### step-1 
 
       git clone https://github.com/TeamSuman/WeTICA.git
 
 #### step-2
-Follow the commands.
 
       cd WeTICA
       conda create --name wepy
@@ -56,41 +55,42 @@ Follow the commands.
 
 
 #### step-3
-Go to the "Scripts" folder of this repository and run the WeTICA.py script with the necessary command line arguments as showcased below:
 
+      cd Scripts
+      
       python WeTICA.py -h
   
-      -dire DIRE          Full PATH of the directory containing system related input files
+             -dire DIRE          Full PATH of the directory containing system related input files
   
-      -num NUM            Number of walkers [Optional, default=24]
+             -num NUM            Number of walkers [Optional, default=24]
   
-      -rid RID            Run index
+             -rid RID            Run index
   
-      -steps STEPS        Number of MD steps between two consecutive resampling processes [optional, default=10000 -> 20 ps]
+             -steps STEPS        Number of MD steps between two consecutive resampling processes [optional, default=10000 -> 20 ps]
   
-      -cyc CYC            Total number of cycles in each run [optional, default=20000]
+             -cyc CYC            Total number of cycles in each run [optional, default=20000]
   
-      -init INIT          Starting structure file (GROMACS .gro format)
+             -init INIT          Starting structure file (GROMACS .gro format)
   
-      -top TOP            System topology file (GROMACS .top format)
+             -top TOP            System topology file (GROMACS .top format)
   
-      -ref REF            Target structure file (GROMACS .gro format)
+             -ref REF            Target structure file (GROMACS .gro format)
   
-      -vec VEC            Eigenvector file
+             -vec VEC            Eigenvector file
   
-      -vid VID [VID ...]  Eigenvectors to be used e.g 0-> 1st vector, 1-> 2nd vector, ...
+             -vid VID [VID ...]  Eigenvectors to be used e.g 0-> 1st vector, 1-> 2nd vector, ...
   
-      -feat FEAT          Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distances & 'allCA'-> pairwise CA-CA distances
+             -feat FEAT          Select feature e.g 'sel_pair' or 'allCA'.'sel_pair'-> selected pairwise atom distances & 'allCA'-> pairwise CA-CA distances
   
-      -pair PAIR          File containing indices of selected atoms [Optional, but required for 'sel_pair' feature]
+             -pair PAIR          File containing indices of selected atoms [Optional, but required for 'sel_pair' feature]
   
-      -dist1 DIST1        Merge distance cut-off (unitless) [Optional, default=0.5]
+             -dist1 DIST1        Merge distance cut-off (unitless) [Optional, default=0.5]
   
-      -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.75]
+             -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.75]
   
-      -tem TEM            Temperature in Kelvin [Optional, default=300]
+             -tem TEM            Temperature in Kelvin [Optional, default=300]
     
-      -gid GID [GID ...]  GPU ids
+             -gid GID [GID ...]  GPU ids
 
 ##### Example
 

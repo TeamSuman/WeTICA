@@ -3,9 +3,9 @@ import os
 import os.path as osp
 import pickle as pkl
 
-import openmm.app as omma
-import openmm as omm
-import openmm.unit as unit
+import simtk.openmm.app as omma
+import simtk.openmm as omm
+import simtk.unit as unit
 
 import mdtraj as mdj
 

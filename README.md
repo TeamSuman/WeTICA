@@ -42,10 +42,10 @@ Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pai
 #### step-1
 First install OpenMM and other dependencies.
 
-      conda create -n openmm python==3.9 numpy==1.25.2 pandas==1.3.5
+      conda create -n openmm python==3.7.13 numpy==1.21.5 pandas==1.3.5
       conda activate openmm
-      conda install -c conda-forge openmm=8.0.0 mdtraj=1.9.9
-      pip install h5py==3.12.1 networkx==3.2.1 tabulate==0.9.0 Jinja2==3.1.4 pint==0.24.3 eliot==1.14.0
+      conda install -c conda-forge openmm=7.5.1 mdtraj=1.9.9
+      pip install h5py==2.10.0 networkx==2.3 tabulate==0.9.0 Jinja2==3.1.2 pint==0.18 eliot==1.14.0
 
 #### step-2
 Clone this repository in the local machine or HPC. 

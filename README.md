@@ -103,9 +103,12 @@ Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains t
 
 To compute the Mean first passage time (MFPT), a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
 
+#### Caution: During on-the-fly convergence check, opening and closing of the hdf5 file might cause unexpected termination of the simulation. To avoid this, copy the wepy.results.h5 file to a new location and check convergence.
+
     A) Convergence check
     B) MFPT calculation
     C) Generation of WE productive trajectory
+
 
 For further information, visit wepy documentation (https://adicksonlab.github.io/wepy/_source/tutorials/data_analysis/index.html).
 

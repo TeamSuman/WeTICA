@@ -20,20 +20,15 @@ To start WeTICA simulation, at least 4 major files are required.
 Example files are provided in the "Systems" folder of this repository.
 
 #### Note 1 
-If AmberTools is used to prepare system and topology files, use the following command to convert the amber structure and topology to GROMACS format.
+Amber structure and topology files can be converted to GROMACS format using the following utility of AmberTools.
 
       amb2gro_top_gro.py -p <name>.prmtop -c <name>.inpcrd -t <name>.top -g <name>.gro
 
 #### Note 2
-If CHARMM-GUI is used to prepare system and topology, files in GROMACS format can be generated from there itself.
+Files in GROMACS format can be also generated from CHARMM-GUI.
 
 #### Note 3
-Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pairwise distances ('allCA'), 2) User selected atom pairwise distances ('sel_pair'). To maintain consistency in calculations, both the eigenvector generation and the simulation should be performed using the same feature.
-
-#### Note 4
-0 based selected atom ids (MDTraj convention) are required for the 'sel_pair' featurization scheme. This file is not required for the 'allCA' feature.
-
-
+Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pairwise distances ('allCA'), 2) User selected atom pairwise distances ('sel_pair'). 0 based selected atom ids supported by MDTraj are required for the 'sel_pair' featurization scheme only. $\bf{Caution:}$ Both the eigenvector generation and the simulation should be performed using the same feature.
 
 
 

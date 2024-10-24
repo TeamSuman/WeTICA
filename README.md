@@ -98,12 +98,13 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
 
 Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains the system related input files. Gradual decrease of the $\bf{"Clst\ walk. dist"}$ value indicates the progress of the simulation. Is $\bf{Clst\ walk. dist ≈ d_{warp}?}$ If yes, there is posibility that some walkers reach the target. Now its time for convergence check as described below.
 
+#### Caution: During on-the-fly convergence check, opening and closing of the hdf5 file might cause unexpected termination of the simulation. To avoid this, copy the wepy.results.h5 file to a new location and check convergence.
+
 
 ## Data Analysis
 
 To compute the Mean first passage time (MFPT), a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
 
-#### Caution: During on-the-fly convergence check, opening and closing of the hdf5 file might cause unexpected termination of the simulation. To avoid this, copy the wepy.results.h5 file to a new location and check convergence.
 
     A) Convergence check
     B) MFPT calculation

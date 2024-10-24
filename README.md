@@ -11,11 +11,11 @@ OpenMM (https://openmm.org)
 
 To start WeTICA simulation, at least 4 major files are required.
 
-1) An equilibrated, neutrilize and solvated initial structure file in GROMACS .gro format.
-2) System topology file in GROMACS .top format.
-3) Target structure file in GROMACS .gro format.
-4) An eigenvector file in .txt format where each column represents one eigenvector.
-5) A file containing the pairwise selected atom ids in .txt format (Optional).
+1) An equilibrated, neutrilize and solvated $\bf{initial\ structure\ file}$ (GROMACS .gro format).
+2) $\bf{System\ topology\ file}$ (GROMACS .top format).
+3) $\bf{Target\ structure\ file}$ (GROMACS .gro format).
+4) An $\bf{eigenvector\ file}$ (.txt format). Each column represents one eigenvector.
+5) Pairwise selected atom id file (.txt format, Optional).
 
 Example files are provided in the "Systems" folder of this repository.
 

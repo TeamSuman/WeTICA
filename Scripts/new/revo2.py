@@ -192,7 +192,7 @@ class REVOResampler(CloneMergeResampler):
             for i, value in enumerate(walker_variations):
                 # 1. must have an amp >=1 which gives the number of clones to be made of it
                 # 2. must not already be a keep merge target
-                if (new_num_walker_copies[i] == 1) and \
+                if (new_num_walker_copies[i] >= 1) and \
                    (new_walker_weights[i]/(new_num_walker_copies[i] + 1) > self.pmin) and \
                    (len(merge_groups[i]) == 0):
                     max_tups.append((value, i))
@@ -308,7 +308,7 @@ class REVOResampler(CloneMergeResampler):
         else:
             happen = False
 
-        return walker_actions, variations[-1], happen, new_num_walker_copies.count(2)
+        return walker_actions, variations[-1], happen
 
     def get_dist(self, walkers):
 
@@ -374,11 +374,11 @@ class REVOResampler(CloneMergeResampler):
 
         # determine cloning and merging actions to be performed, by
         # maximizing the variation, i.e. the Decider
-        resampling_data, variation, happen, nsplit = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
+        resampling_data, variation, happen = self.decide(walker_weights, num_walker_copies, distance_arr, distance_matrix)
 
 
         file = open(f'{self.path}/Info_{self.run_id}.txt', 'a')
-        file.write(f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\t'+f'Number of splitting: {nsplit}'+'\n')
+        file.write(f'Clst walk. dist: {1/cw_dist}'+'\t'+f'Resampling happend: {happen}'+'\n')
         file.close()
 
         # convert the target idxs and decision_id to feature vector arrays

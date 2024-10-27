@@ -174,10 +174,8 @@ class REVOResampler(CloneMergeResampler):
         logging.info("Starting variance optimization: {}".format(variation))
 
         productive = True
-        another_trail = True
-        while productive == True or another_trail == True:
+        while productive:
             productive = False
-            another_trail = False
             # find min and max walker_variationss, alter new_amp
 
             # initialize to None, we may not find one of each
@@ -231,7 +229,7 @@ class REVOResampler(CloneMergeResampler):
 
                     # if any were found set this as the closewalk
                     if len(closewalks_dists) > 0:
-                        closedist, closewalk = rand.choice(closewalks_dists)
+                        closedist, closewalk = min(closewalks_dists)
 
 
             # did we find a closewalk?
@@ -289,7 +287,6 @@ class REVOResampler(CloneMergeResampler):
                     new_num_walker_copies[min_idx] = 1
                     new_num_walker_copies[closewalk] = 1
                     new_num_walker_copies[max_idx] -= 1
-                    another_trial = True
 
         # given we know what we want to clone to specific slots
         # (squashing other walkers) we need to determine where these

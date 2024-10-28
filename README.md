@@ -103,7 +103,7 @@ Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains t
 
 ## Data Analysis
 
-To compute the Mean first passage time (MFPT), a jupyter notebook is provided in the "Analysis notebooks" folder of this repository. Three major analysis tutorials are provided in this notebook as follows:
+A jupyter notebook is provided in the "Analysis notebooks" folder of this repository for the following analyses:
 
 
     A) Convergence check

@@ -44,7 +44,7 @@ class REVOResampler(CloneMergeResampler):
                  run_id=None,
                  merge_dist=None,
                  pmax=0.20,
-                 pmin=1e-12,
+                 pmin=1e-30,
                  init_state=None,
                  seed=None,
                  path=None,

@@ -364,9 +364,8 @@ class REVOResampler(CloneMergeResampler):
         # calculate  distances
         distance_arr, distance_matrix, images = self.get_dist(walkers)
 
-        # Closest walker info
-        cw_id = np.where(distance_arr == np.max(distance_arr))[0][0]
-        cw_dist = distance_arr[cw_id]
+        # Closest walker distance
+        cw_dist = np.max(distance_arr)
         
 
         # determine cloning and merging actions to be performed, by

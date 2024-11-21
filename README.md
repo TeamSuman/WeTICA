@@ -81,7 +81,7 @@ Follow the instructions step-by-step.
   
              -dist1 DIST1        Merge distance cut-off (unitless) [Optional, default=0.5]
   
-             -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=0.75]
+             -dist2 DIST2        Warped distance cut-off (unitless) [Optional, default=1.0]
   
              -tem TEM            Temperature in Kelvin [Optional, default=300]
     

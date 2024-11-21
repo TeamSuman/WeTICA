@@ -92,7 +92,7 @@ Follow the instructions step-by-step.
 This example showcases the use of WeTICA.py script to study the unfolding of Protein G using the first two eigenvectors (specified as: -vid 0 1) as the collective variables (CVs).
 
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
-    -feat sel_pair  -pair atom_pairs.txt -gid 0 1 2 3 -tem 350
+    -feat allCA -gid 0 1 -tem 350
 
 ## On-the-fly monitoring of the simulation progress
 

@@ -96,7 +96,7 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
 
 ## On-the-fly monitoring of the simulation progress
 
-Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains the system related input files. Gradual decrease of the $\bf{"Clst\ walk. dist"}$ value indicates the progress of the simulation. Is $\bf{Clst\ walk. dist ≈ d_{warp}?}$ If yes, there is posibility that some walkers reach the target. Now its time for convergence check as described below.
+Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains the system related input files. Gradual decrease of the $\bf{"Clst\ walk. dist"}$ value indicates the progress of the simulation. Is $\bf{Clst\ walk. dist ≈ d_{warp}?}$ If yes, there is posibility that some walkers reach the target. Now its time for convergence check.
 
 #### Caution: During on-the-fly convergence check, opening and closing of the hdf5 file might cause unexpected termination of the simulation. To avoid this, copy the wepy.results.h5 file to a new location and check convergence.
 

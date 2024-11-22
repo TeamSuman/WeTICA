@@ -28,7 +28,7 @@ Amber structure and topology files can be converted to GROMACS format using the 
 Files in GROMACS format can be also generated from CHARMM-GUI.
 
 #### Note 3
-Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pairwise distances ('allCA'), 2) User selected atom pairwise distances ('sel_pair'). 0 based selected atom ids supported by MDTraj are required for the 'sel_pair' featurization scheme only. $\bf{Caution:}$ Both the eigenvector generation and the simulation should be performed using the same feature.
+Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pairwise distances ('allCA'), 2) User selected atom pairwise distances ('sel_pair'). 0 based selected atom ids (MDTraj convention) are required for the 'sel_pair' featurization scheme only. $\bf{Caution:}$ Both the eigenvector generation and the simulation should be performed using the same feature.
 
 
 

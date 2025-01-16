@@ -96,7 +96,7 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
 
 #### Note
 
-The installaion process and the script has been tested on AlmaLinux v8.9 using NVIDIA A100 GPU cards (CUDA v12.4).
+The installaion process and the script have been tested on AlmaLinux v8.9 using NVIDIA A100 GPU cards (CUDA v12.4).
 
 ## On-the-fly monitoring of the simulation progress
 

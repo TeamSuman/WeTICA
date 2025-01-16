@@ -94,6 +94,10 @@ This example showcases the use of WeTICA.py script to study the unfolding of Pro
     python WeTICA.py -dire Systems/protein_G -rid 1 -init folded.gro -top topol.top -ref unfolded.gro -vec eigenvectors.txt -vid 0 1
     -feat allCA -gid 0 1 -tem 350
 
+#### Note
+
+The installaion process and the script has been tested on AlmaLinux v8.9 using NVIDIA A100 GPU cards (CUDA v12.4).
+
 ## On-the-fly monitoring of the simulation progress
 
 Open the $\bf{"Info.txt"}$ file generated inside the same folder that contains the system related input files. Gradual decrease of the $\bf{"Clst\ walk. dist"}$ value indicates the progress of the simulation. Is $\bf{Clst\ walk. dist ≈ d_{warp}?}$ If yes, there is posibility that some walkers reach the target. Now its time for convergence check.

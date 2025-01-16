@@ -32,7 +32,7 @@ Currently WeTICA framework supports two featurization schemes: 1) CA-CA atom pai
 
 
 
-## Usage
+## Installation & Usage
 Follow the instructions step-by-step.
 
 #### step-1 

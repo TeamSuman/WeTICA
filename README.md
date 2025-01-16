@@ -113,3 +113,13 @@ A jupyter notebook is provided in the "Analysis" folder of this repository for t
 
 For further information, visit wepy documentation (https://adicksonlab.github.io/wepy/_source/tutorials/data_analysis/index.html).
 
+
+## How to cite
+
+If you use WeTICA, please cite:
+
+    WeTICA: A directed search weighted ensemble based enhanced sampling method to estimate rare event kinetics in a reduced dimensional space,
+    Sudipta Mitra, Ranjit Biswas, Suman Chakrabarty, J. Chem. Phys. 162(3), 034106 (2025). DOI:10.1063/5.0239713
+
+Link:https://pubs.aip.org/aip/jcp/article/162/3/034106/3331434/WeTICA-A-directed-search-weighted-ensemble-based
+
